@@ -1,0 +1,65 @@
+/*features*/
+.feature-list {
+  @include typedisplay($display);
+
+  & .item + .item {
+    margin-left: 30px;
+  }
+  & .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+  & .text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.icon {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: $background-color-second;
+}
+
+.icon-feature {
+  @include typedisplay($display);
+  width: 70px;
+  height: 70px;
+}
+
+/*.feature-list .item::before {
+  display: flex;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--background-color-second);
+}
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+*/

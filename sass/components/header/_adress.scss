@@ -1,0 +1,54 @@
+/*address*/
+.address {
+  @include typedisplay($display);
+  align-items: center;
+  margin-left: auto;
+}
+
+.address-link {
+  @include typedisplay($display);
+  align-items: center;
+  max-width: 161px;
+  height: 16px;
+  color: $main-text-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: all 250ms $animation-timing-function;
+
+  & + & {
+    margin-left: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: $main-text-color;
+
+  .address-link:hover &,
+  .address-link:focus & {
+    fill: $accent-color;
+  }
+}
+
+.icon-mobile {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: $main-text-color;
+
+  .address-link:hover &,
+  .address-link:focus & {
+    fill: $accent-color;
+  }
+}

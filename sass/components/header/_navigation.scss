@@ -1,0 +1,56 @@
+/*site navigation*/
+.main-nav {
+  @include typedisplay($display);
+  align-items: center;
+}
+
+.site-nav {
+  @include typedisplay($display);
+  margin-left: 85px;
+
+  & .item + .item {
+    margin-left: 50px;
+  }
+}
+/*
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+*/
+
+.site-nav .link {
+  @include typedisplay($display);
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.site-nav .link.current {
+  color: $accent-color;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include typedisplay(block);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+    transition: background-color 250ms $animation-timing-function;
+  }
+}

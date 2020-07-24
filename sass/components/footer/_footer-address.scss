@@ -1,0 +1,21 @@
+.footer-adress {
+  @include typedisplay(block);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-address-link {
+  color: $footer-text-color;
+
+  transition: color 250ms $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

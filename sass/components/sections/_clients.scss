@@ -1,0 +1,39 @@
+/*clients*/
+
+.clients {
+  @include typedisplay($display);
+}
+.client-link {
+  @include typedisplay($display);
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  padding: 22px 41px;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  transition: all 250ms $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    cursor: pointer;
+    fill: $accent-color;
+  }
+}
+.item + .item {
+  margin-left: 30px;
+}
+
+.icon-clients {
+  max-width: 88px;
+  max-height: 52px;
+  transition: all 250ms $animation-timing-function;
+  fill: $icon-color;
+
+  .client-link:hover &,
+  .client-link:focus & {
+    cursor: pointer;
+    fill: $accent-color;
+  }
+}

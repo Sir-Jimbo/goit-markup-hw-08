@@ -1,0 +1,39 @@
+/*social-links*/
+.social-links {
+  @include typedisplay($display);
+}
+
+.social-links .link {
+  @include typedisplay(inline-flex);
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: all 250ms $animation-timing-function;
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    box-shadow: none;
+    cursor: pointer;
+
+    background-color: $accent-color;
+  }
+}
+
+.social-links .links:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-links {
+  @include typedisplay($display);
+  width: 20px;
+  height: 20px;
+  fill: $icon-color;
+
+  .link:hover &,
+  .link:focus & {
+    fill: $primary-text-color;
+  }
+}

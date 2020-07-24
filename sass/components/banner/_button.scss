@@ -1,0 +1,22 @@
+.button {
+  @include typedisplay(inline-flex);
+  align-items: center;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  color: $primary-text-color;
+  background-color: $accent-color;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
