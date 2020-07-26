@@ -1,31 +1,47 @@
 /*address*/
 .address {
-  @include typedisplay($display);
-  align-items: center;
-  margin-left: auto;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    @include typedisplay($display);
+    align-items: center;
+  }
 }
 
 .address-link {
-  @include typedisplay($display);
-  align-items: center;
-  max-width: 161px;
-  height: 16px;
+  @include typedisplay(block);
+  height: 21px;
   color: $main-text-color;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
-
   transition: all 250ms $animation-timing-function;
-
-  & + & {
-    margin-left: 30px;
-  }
-
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .address-link:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-link {
+    @include typedisplay($display);
+    align-items: center;
+    max-width: 161px;
+    height: 16px;
+    color: $main-text-color;
+    font-size: 14px;
+    line-height: 1.14;
+
+    & + & {
+      margin-left: 30px;
+    }
   }
 }
 

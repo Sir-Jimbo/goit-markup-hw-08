@@ -15,28 +15,41 @@
 
 <body>
     <!--Шапка страницы-->
-    <header>
+    <header class="page-header">
         <!--Главная навигация-->
         <nav class="container main-nav">
             <a href="/" class="logo text"><span class="logo-accent">Web</span> Studio</a>
-            <ul class="site-nav list">
-                <li class="item"><a href="" class="link current text">Студия</a></li>
-                <li class="item"><a href="./portfolio.html" class="link text">Портфолио</a></li>
-                <li class="item"><a href="" class="link text">Контакты</a></li>
-            </ul>
-            <address class="address">
-                <a href="mailto:info@devstudio.com" class="address-link text">
-                    <svg class="icon-mail">
-                        <use href="./images/sprite.svg#icon-e-mail"></use>
-                    </svg>
-                    info@devstudio.com</a>
-                <a href="tel:+380961111111" class="address-link text">
-                    <svg class="icon-mobile">
-                        <use href="./images/sprite.svg#icon-mobile"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a>
-            </address>
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
+                data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-crose" href="./images/sprite.svg#icon-crose"></use>
+                    <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>
+
+                <ul class="site-nav list">
+                    <li class="item-nav"><a href="" class="link current text">Студия</a></li>
+                    <li class="item-nav"><a href="./portfolio.html" class="link text">Портфолио</a></li>
+                    <li class="item-nav"><a href="" class="link text">Контакты</a></li>
+                </ul>
+
+
+                <div class="address">
+                    <a href="mailto:info@devstudio.com" class="address-link text">
+                        <svg class="icon-mail">
+                            <use href="./images/sprite.svg#icon-e-mail"></use>
+                        </svg>
+                        info@devstudio.com</a>
+                    <a href="tel:+380961111111" class="address-link text">
+                        <svg class="icon-mobile">
+                            <use href="./images/sprite.svg#icon-mobile"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </div>
+
+            </div>
         </nav>
     </header>
     <!--Основной контент-->
@@ -51,33 +64,35 @@
                 <div class="modal">
                     <form class="form">
                         <div class="form-title">Оставьте свои данные, мы вам перезвоним</div>
-                        <div class="form-field">
-                            <input class="form-input" type="text" name="name" id="name" placeholder=" ">
-                            <label class="form-label" for="name">Имя</label>
-                            <svg class="icon-input">
-                                <use href="./images/sprite.svg#icon-person-black"></use>
-                            </svg>
+                        <div class="field">
+                            <div class="form-field">
+                                <input class="form-input" type="text" name="name" id="name" placeholder=" ">
+                                <label class="form-label" for="name">Имя</label>
+                                <svg class="icon-input">
+                                    <use href="./images/sprite.svg#icon-person-black"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">
+                                <label class="form-label" for="tel">Телефон</label>
+                                <svg class="icon-input">
+                                    <use href="./images/sprite.svg#icon-phone-black"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
+                                <label class="form-label" for="mail">Почта</label>
+                                <svg class="icon-input">
+                                    <use href="./images/sprite.svg#icon-email-black"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <textarea class="form-comment" name="comment" id="comment" rows="8"
+                                    placeholder=" "></textarea>
+                                <label class="form-label-comment" for="comment">Комментарий</label>
+                            </div>
                         </div>
-                        <div class="form-field">
-                            <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">
-                            <label class="form-label" for="tel">Телефон</label>
-                            <svg class="icon-input">
-                                <use href="./images/sprite.svg#icon-phone-black"></use>
-                            </svg>
-                        </div>
-                        <div class="form-field">
-                            <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
-                            <label class="form-label" for="mail">Почта</label>
-                            <svg class="icon-input">
-                                <use href="./images/sprite.svg#icon-email-black"></use>
-                            </svg>
-                        </div>
-                        <div class="form-field">
-                            <textarea class="form-comment" name="comment" id="comment" rows="8"
-                                placeholder=" "></textarea>
-                            <label class="form-label-comment" for="comment">Комментарий</label>
-                        </div>
-                        <div class="form-field align">
+                        <div class="form-checkbox">
                             <input class="checkbox" type="checkbox" name="policy" id="policy">
                             <label class="label-checkbox" for="policy">Соглашаюсь с рассылкой и принимаю <a href="/"
                                     target="_blank" class="checkbox-link"> Условия
@@ -101,7 +116,7 @@
                 <!--Скрытый заголовок-->
                 <h2 class="section-title">Преимущества</h2>
                 <ul class="feature-list list">
-                    <li class="item">
+                    <li class="feature-item">
                         <div class="icon">
                             <svg class="icon-feature">
                                 <use href="./images/sprite.svg#icon-antenna"></use>
@@ -111,7 +126,7 @@
                         <p class="text">Идейные соображения, а также начало повседневной работы по формированию позиции.
                         </p>
                     </li>
-                    <li class="item">
+                    <li class="feature-item">
                         <div class="icon">
                             <svg class="icon-feature">
                                 <use href="./images/sprite.svg#icon-clock"></use>
@@ -122,7 +137,7 @@
                             собой.
                         </p>
                     </li>
-                    <li class="item">
+                    <li class="feature-item">
                         <div class="icon">
                             <svg class="icon-feature">
                                 <use href="./images/sprite.svg#icon-diagram"></use>
@@ -133,7 +148,7 @@
                             обуславливает.
                         </p>
                     </li>
-                    <li class="item">
+                    <li class="featureitem">
                         <div class="icon">
                             <svg class="icon-feature">
                                 <use href="./images/sprite.svg#icon-astronaut"></use>
@@ -435,6 +450,7 @@
         </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

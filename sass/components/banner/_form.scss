@@ -1,7 +1,7 @@
 .form {
   @include typedisplay(block);
   position: relative;
-  width: 528px;
+  width: 450px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
@@ -10,26 +10,33 @@
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 .form-title {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   font-weight: 700;
   letter-spacing: 0.03em;
   color: $title-text-color;
 }
+
+.field {
+  margin-bottom: 20px;
+}
+
 .form-field {
   position: relative;
   @include typedisplay($display);
   flex-direction: column;
-  margin-bottom: 28px;
-  &.align {
-    @include typedisplay($display);
-    align-items: center;
-    align-content: center;
+
+  &:not(:last-child) {
+    margin-bottom: 28px;
   }
 }
 
@@ -129,6 +136,13 @@
   color: $accent-color;
 }
 
+.form-checkbox {
+  @include typedisplay($display);
+  align-items: center;
+  align-content: center;
+  margin-bottom: 30px;
+}
+
 .checkbox {
   @include typedisplay(inline-flex);
   margin-left: 0;
@@ -139,8 +153,8 @@
 }
 
 .label-checkbox {
-  font-size: 14px;
-  line-height: 1.71px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: $main-text-color;
@@ -160,6 +174,11 @@
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 

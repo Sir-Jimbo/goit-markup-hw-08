@@ -1,15 +1,97 @@
 /*site navigation*/
+.page-header {
+  position: relative;
+}
 .main-nav {
   @include typedisplay($display);
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+  padding-bottom: 21px;
+}
+@media screen and (min-width: 1200px) {
+padding-top: 24px;
+  padding-bottom: 25px;
+}
 }
 
-.site-nav {
-  @include typedisplay($display);
-  margin-left: 85px;
+.menu-button {
+  @include typedisplay(inline-flex);
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  @media screen and (min-width: 768px) {
+    @include typedisplay(none);
+  }
+  & .icon-crose {
+    @include typedisplay(none);
+  }
+  &.is-open .icon-crose {
+    @include typedisplay(block);
+  }
+  &.is-open .icon-menu {
+    @include typedisplay(none);
+  }
+}
 
-  & .item + .item {
-    margin-left: 50px;
+.menu-button:hover .icon-crose,
+.menu-button:focus .icon-crose {
+  fill: $accent-color;
+}
+.menu-button:hover .icon-menu,
+.menu-button:focus .icon-menu {
+  fill: $accent-color;
+}
+
+.menu-container {
+  &.is-open {
+    @include typedisplay(block);
+  }
+
+  @media screen and (max-width: 767px) {
+    @include typedisplay(none);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $primary-text-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  @media screen and (min-width: 768px) {
+    @include typedisplay($display);
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-nav {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .item-nav:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    @include typedisplay($display);
+    margin-left: 81px;
+
+    @media screen and (min-width: 1200px) {
+  .site-nav {
+    @include typedisplay($display);
+    margin-left: 85px;
+    & .item + .item {
+      margin-left: 50px;
+    }
   }
 }
 /*
@@ -19,15 +101,9 @@
 */
 
 .site-nav .link {
-  @include typedisplay($display);
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   color: $title-text-color;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
 
   transition: color 250ms $animation-timing-function;
@@ -36,10 +112,20 @@
   &:focus {
     color: $accent-color;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 768px) {
+    @include typedisplay($display);
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .site-nav .link.current {
   color: $accent-color;
+  
   &::after {
     content: "";
     position: absolute;
@@ -52,5 +138,8 @@
     border-radius: 2px;
     background-color: $accent-color;
     transition: background-color 250ms $animation-timing-function;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 8px;
   }
 }
