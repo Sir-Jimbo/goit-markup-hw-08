@@ -31,6 +31,15 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .banner {
+    & .overlay {
+      max-width: 768px;
+      padding: 118px 204px;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .banner {
     & .overlay {

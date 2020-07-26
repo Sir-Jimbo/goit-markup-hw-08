@@ -3,7 +3,9 @@
   text-align: center;
   @media screen and (min-width: 768px) {
     @include typedisplay($display);
-    align-items: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
   }
 }
 
@@ -39,9 +41,15 @@
     font-size: 14px;
     line-height: 1.14;
 
-    & + & {
-      margin-left: 30px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-link:not(:last-child) {
+    margin-right: 30px;
   }
 }
 

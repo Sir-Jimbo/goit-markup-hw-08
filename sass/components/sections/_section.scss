@@ -1,24 +1,46 @@
 /*section*/
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  &.one-padding {
-    padding-top: 94px;
-    padding-bottom: 0;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &-title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     color: $title-text-color;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
   }
   &.background {
     background-color: $background-color-second;
+  }
+}
+
+@media screen and (mіn-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &-title {
+      margin-top: 0;
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+}
+
+.section-title-hidden {
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.section.hidden {
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
 }

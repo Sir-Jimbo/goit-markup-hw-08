@@ -1,21 +1,15 @@
 /*site navigation*/
 .page-header {
   position: relative;
+  border-bottom: 1px solid #ececec;
 }
 .main-nav {
   @include typedisplay($display);
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ececec;
-  @media screen and (min-width: 768px) {
-    padding-top: 21px;
-  padding-bottom: 21px;
-}
-@media screen and (min-width: 1200px) {
-padding-top: 24px;
-  padding-bottom: 25px;
-}
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .menu-button {
@@ -69,6 +63,8 @@ padding-top: 24px;
   @media screen and (min-width: 768px) {
     @include typedisplay($display);
     align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 767px) {
@@ -84,14 +80,15 @@ padding-top: 24px;
   .site-nav {
     @include typedisplay($display);
     margin-left: 81px;
-
-    @media screen and (min-width: 1200px) {
-  .site-nav {
-    @include typedisplay($display);
-    margin-left: 85px;
-    & .item + .item {
-      margin-left: 50px;
+    & .item-nav:not(:last-child) {
+      margin-right: 50px;
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 85px;
   }
 }
 /*
@@ -121,11 +118,15 @@ padding-top: 24px;
     font-size: 14px;
     line-height: 1.14;
   }
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .site-nav .link.current {
   color: $accent-color;
-  
+
   &::after {
     content: "";
     position: absolute;
