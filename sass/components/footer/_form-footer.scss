@@ -1,16 +1,19 @@
-.form-footer {
-  @include typedisplay($display);
+@media screen and (min-width: 1200px) {
+  .form-footer {
+    @include typedisplay($display);
+  }
 }
 
-.form-footer-field {
-  @include typedisplay(inline-flex);
-  position: relative;
+@media screen and (min-width: 1200px) {
+  .form-footer-field {
+    @include typedisplay(inline-flex);
+    position: relative;
+  }
 }
 .form-footer-input {
-  @include typedisplay(inline-flex);
   position: relative;
-  width: 358px;
-  margin-right: 12px;
+  width: 450px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -20,9 +23,15 @@
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
+
+  @media screen and (min-width: 1200px) {
+    @include typedisplay(inline-flex);
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 .form-footer-label {
-  @include typedisplay(inline-flex);
   position: absolute;
   top: 50%;
   left: 16px;
@@ -34,4 +43,8 @@
 
   transform: translateY(-50%);
   transition: all 250ms $animation-timing-function;
+
+  @media screen and (min-width: 1200px) {
+    @include typedisplay(inline-flex);
+  }
 }

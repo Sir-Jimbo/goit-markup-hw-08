@@ -1,24 +1,62 @@
 /*footer*/
 .footer {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
   padding-top: 60px;
   padding-bottom: 60px;
   color: $primary-text-color;
   background-color: $footer-color;
 }
-.footer-flex {
-  @include typedisplay($display);
 
-  & .left {
+.left {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-right: 69px;
   }
-  & .middle {
+}
+
+.middle {
+  @include typedisplay(inline-block);
+  align-items: center;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 5px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-right: 94px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer-flex {
+    @include typedisplay($display);
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    /*
+    & .left {
+      margin-right: 69px;
+    }
+    & .middle {
+      margin-right: 94px;
+    }
+    */
+  }
+}
 .footer-title {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }

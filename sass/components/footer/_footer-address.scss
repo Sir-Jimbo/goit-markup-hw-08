@@ -1,11 +1,13 @@
 .footer-adress {
-  @include typedisplay(block);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 
   &:not(:last-child) {
     margin-bottom: 9px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include typedisplay(block);
   }
 }
 
