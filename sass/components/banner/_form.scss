@@ -11,6 +11,10 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 
+  @media screen and (max-width: 479px) {
+    width: 320px;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 528px;
   }
