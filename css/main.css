@@ -748,6 +748,12 @@ body {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 320px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
