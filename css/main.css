@@ -1364,6 +1364,12 @@ body {
   background-color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+  .form-footer-input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .form-footer-input {
     display: -webkit-inline-box;
@@ -1483,7 +1489,7 @@ body {
 
 .projects-item {
   position: relative;
-  max-width: 450px;
+  width: 100%;
   height: 404px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
@@ -1561,7 +1567,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
+  width: 100%;
   height: 294px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -1639,11 +1645,23 @@ body {
   letter-spacing: 0.06em;
 }
 
+@media screen and (max-width: 479px) {
+  .projects-title {
+    font-size: 15px;
+  }
+}
+
 .projects-filter {
   margin-top: 0;
   margin-bottom: 0;
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
+}
+
+@media screen and (max-width: 479px) {
+  .projects-filter {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

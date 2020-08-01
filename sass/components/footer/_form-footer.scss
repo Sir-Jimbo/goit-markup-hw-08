@@ -24,6 +24,10 @@
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
 
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
   @media screen and (min-width: 1200px) {
     @include typedisplay(inline-flex);
     width: 358px;
