@@ -12,11 +12,20 @@
         $opacity-background-color,
         $opacity-background-color
       ),
-      url(../images/banner.jpg);
+      url(../images/header-img-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $opacity-background-color,
+          $opacity-background-color
+        ),
+        url(../images/header-img-mobile@2x.jpg);
+    }
   }
+
   &-title {
     margin-top: 0;
     margin-bottom: 30px;
@@ -31,11 +40,54 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .banner {
     & .overlay {
       max-width: 768px;
+      background-image: linear-gradient(
+          to right,
+          $opacity-background-color,
+          $opacity-background-color
+        ),
+        url(../images/header-img-tablet.jpg);
+      @media screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to right,
+            $opacity-background-color,
+            $opacity-background-color
+          ),
+          url(../images/header-img-tablet@2x.jpg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    & .overlay {
       padding: 118px 204px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .banner {
+    & .overlay {
+      max-width: 1600px;
+      background-image: linear-gradient(
+          to right,
+          $opacity-background-color,
+          $opacity-background-color
+        ),
+        url(../images/header-img-desktop.jpg);
+      @media screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to right,
+            $opacity-background-color,
+            $opacity-background-color
+          ),
+          url(../images/header-img-desktop@2x.jpg);
+      }
     }
   }
 }
@@ -44,8 +96,7 @@
   .banner {
     & .overlay {
       height: 600px;
-      max-width: 1600px;
-      padding: 200px 452px;
+      padding: 200px 204px;
     }
 
     &-title {
