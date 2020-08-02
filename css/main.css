@@ -1012,32 +1012,25 @@ img {
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
-}
+  /*
+  &::before {
+    @include typedisplay($display);
+    content: "";
+    height: 320px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-.team-list .team-item::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  content: "";
-  height: 320px;
-  width: 100%;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media screen and (min-width: 768px) {
-  .team-list .team-item::before {
-    height: 260px;
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-list .team-item::before {
-    height: 260px;
-    width: 270px;
-  }
+    @media screen and (min-width: 768px) {
+      height: 260px;
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      height: 260px;
+      width: 270px;
+    }
+  }*/
 }
 
 @media screen and (min-width: 768px) {
@@ -1065,7 +1058,7 @@ img {
 }
 
 .team-list .title {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
   color: #212121;
   font-weight: 500;
@@ -1078,10 +1071,6 @@ img {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
-}
-
-.product-designer::before {
-  background-image: url(../images/Kucherenko.jpg);
 }
 
 .frontend-developer::before {
