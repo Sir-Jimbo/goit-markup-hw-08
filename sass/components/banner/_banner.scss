@@ -12,7 +12,7 @@
         $opacity-background-color,
         $opacity-background-color
       ),
-      url(../images/header-img-mobile.jpg);
+      url(../images/Header-img-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,7 +22,7 @@
           $opacity-background-color,
           $opacity-background-color
         ),
-        url(../images/header-img-mobile@2x.jpg);
+        url(../images/Header-img-mobile@2x.jpg);
     }
   }
 
@@ -49,14 +49,14 @@
           $opacity-background-color,
           $opacity-background-color
         ),
-        url(../images/header-img-tablet.jpg);
+        url(../images/Header-img-tablet.jpg);
       @media screen and (min-resolution: 2dppx) {
         background-image: linear-gradient(
             to right,
             $opacity-background-color,
             $opacity-background-color
           ),
-          url(../images/header-img-tablet@2x.jpg);
+          url(../images/Header-img-tablet@2x.jpg);
       }
     }
   }
@@ -79,14 +79,14 @@
           $opacity-background-color,
           $opacity-background-color
         ),
-        url(../images/header-img-desktop.jpg);
+        url(../images/Header-img-desktop.jpg);
       @media screen and (min-resolution: 2dppx) {
         background-image: linear-gradient(
             to right,
             $opacity-background-color,
             $opacity-background-color
           ),
-          url(../images/header-img-desktop@2x.jpg);
+          url(../images/Header-img-desktop@2x.jpg);
       }
     }
   }
@@ -96,7 +96,7 @@
   .banner {
     & .overlay {
       height: 600px;
-      padding: 200px 204px;
+      padding: 200px 452px;
     }
 
     &-title {
