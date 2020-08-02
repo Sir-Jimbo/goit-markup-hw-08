@@ -64,11 +64,8 @@
 .project-img {
   position: relative;
   @include typedisplay($display);
-  width: 100%;
-  height: 294px;
+
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media screen and (min-width: 768px) {
     width: 354px;
@@ -80,48 +77,11 @@
   }
 }
 
-.project-img.project1 {
-  background-image: url(../images/project1.jpg);
-}
-
-.project-img.project2 {
-  background-image: url(../images/project2.jpg);
-}
-
-.project-img.project3 {
-  background-image: url(../images/project3.jpg);
-}
-
-.project-img.project4 {
-  background-image: url(../images/project4.jpg);
-}
-
-.project-img.project5 {
-  background-image: url(../images/project5.jpg);
-}
-
-.project-img.project6 {
-  background-image: url(../images/project6.jpg);
-}
-
-.project-img.project7 {
-  background-image: url(../images/project7.jpg);
-}
-
-.project-img.project8 {
-  background-image: url(../images/project8.jpg);
-}
-
-.project-img.project9 {
-  background-image: url(../images/project9.jpg);
-}
-
 .project-bottom {
   @include typedisplay($display);
   flex-direction: column;
   padding: 20px 24px;
 }
-
 .projects-title {
   margin-top: 0;
   margin-bottom: 4px;
