@@ -1006,8 +1006,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 450px;
-  height: 482px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -1071,18 +1069,6 @@ img {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
-}
-
-.frontend-developer::before {
-  background-image: url(../images/Ivanova.jpg);
-}
-
-.marketing::before {
-  background-image: url(../images/Schevchenko.jpg);
-}
-
-.ui-designer::before {
-  background-image: url(../images/Nikolaev.jpg);
 }
 
 /*social-links*/
